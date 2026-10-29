@@ -185,18 +185,28 @@
                     </div>
                 </div>
 
-                <!-- Right Profile Avatar/Image -->
+                <!-- Right Profile Avatar/Image with Spider-Man Hover Effect -->
                 <div class="relative flex-1 flex justify-center items-center">
                     <div class="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
                         <!-- Decorative background glow ring -->
                         <div class="absolute inset-0 rounded-full bg-gradient-brand opacity-30 blur-2xl animate-pulse"></div>
                         
-                        <!-- Avatar Container -->
-                        <div class="relative w-full h-full rounded-full p-2 bg-gradient-brand avatar-glow">
+                        <!-- Avatar Container with Hover Trigger -->
+                        <div class="relative w-full h-full rounded-full p-2 bg-gradient-brand avatar-glow group overflow-hidden">
+                            
+                            <!-- Normal Image (Default) -->
                             <img src="assets/1.jpg" 
-                                 alt="Erwin Semorio" 
-                                 class="w-full h-full object-cover rounded-full border-4 border-darkBg"
-                                 onerror="this.src='https://placehold.co/400x400/131b2e/ffffff?text=Erwin+Semorio'">
+                                alt="Erwin Semorio" 
+                                class="absolute inset-2 w-[calc(100%-1rem)] h-[calc(100%-1rem)] object-cover rounded-full border-4 border-darkBg transition-all duration-500"
+                                onerror="this.src='https://placehold.co/400x400/131b2e/ffffff?text=Erwin+Semorio'">
+                            
+                            <!-- Spider-Man Image (Appears as a clean half-split on hover) -->
+                            <img src="assets/spiderwin.jpg" 
+                                alt="Spider-Man Mode" 
+                                class="absolute inset-2 w-[calc(100%-1rem)] h-[calc(100%-1rem)] object-cover rounded-full border-4 border-darkBg opacity-0 group-hover:opacity-100 transition-all duration-500"
+                                style="clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 50% 100%);"
+                                onerror="this.src='https://placehold.co/400x400/131b2e/ffffff?text=Spider-Man'">
+                                
                         </div>
                     </div>
                 </div>
